@@ -1,0 +1,115 @@
+$fontFamily: "Monserrat", Arial, Helvetica, sans-serif;
+$bg-color: #0f8ee2; 
+
+@mixin flexBox {
+    display: flex;
+    justify-content:space-between;
+}
+
+@mixin flexBoxC {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin Cart($width, $backgroud-color,$padding,$box-sizing,$box-shadow,$position) {
+    width: $width;
+    background-color: $backgroud-color; 
+    padding: $padding;
+    box-sizing: $box-sizing;
+    box-shadow: $box-shadow;
+    position: $position; 
+}
+
+@mixin buttoncomplement {
+    background-color: rgb(209, 209,209);
+}
+
+%link_EstiloProducto {
+    width: 100%;
+    margin: 0;
+    gap: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+
+    grid-column-gap: 10px;
+    background-color: $bg-color;
+}
+
+%link_Menu {
+    width: 100%;
+    padding: 20px 50px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px, solid,#008000;
+    word-spacing:2px;  
+}
+%link_cartPadre {
+    padding: 20px 0;
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+    margin-left: 0;
+}
+%link_cartTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 25px 0;
+    box-sizing: border-box;
+}
+
+%link_cartHijo {
+    margin: auto;
+    width:25px;
+    height: 25px; 
+    border-radius: 50%;
+    background-color: #d81414;
+    color: #f5f7f8;
+    position: absolute;
+    align-content: center;
+    top: 12%;
+    right: 20%;
+    z-index: 100;
+}
+%link_carrito{
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    z-index: 50;
+}
+%link_Productsbutton {
+    display: block;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 600;
+    font-family: $fontFamily;
+}
+
+
+%link_article {
+    border-bottom: 1px solid #333;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+%link_footer{
+    width: 85%;
+    padding: 20px 50px;
+    background-color:#7fffd4;
+    align-items: center;
+    box-sizing: border-box;
+    /* usando la funcion CLAMP */    
+    font-size: clamp(.5rem, 5vw, 1rem);
+}

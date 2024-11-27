@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estos links son para CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigini>
+    <!-- Estos links resetean los estilos usados antes de procesar la logica de esta hoja para no afectar las definiciones de estilos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/main.css">    
+    <script src="js/functios.js" defer></script>
+    <title>JS - DOM</title>
+</head>
+<body>
+    <header class="header">
+        <section class="header__title">
+            <h1 id="head1">MODA EUROPEA</h1>
+        </section>
+        <section class="header__menu">
+            <img src="Img/Ropa para dama.jfif" class="menu__img">
+            <nav class="menu__icons">
+                <i><img src="Img/menu_4381848.png" class="menu__icon" alt="Icono Menu">
+                <i><img src="Img/agencia-de-viajes.png" class="menu__icon" alt="Logo Agencia de viajes"></i> 
+                <i><img src="Img/jacket_5628742.png" class="menu__icon" alt="Logo de chamarra de piel">
+                <i><img src="Img/Multimedia.png" class="menu__icon"  alt="Logo Multimedia">
+                <div class="menu__icons menu__icons--secondary">
+                    <div id="cartpadre">
+                        <i id="carrito"><img src="Img/shopping-cart_10783318.png" class="menu__icon" alt="Icono Carrito"></i>
+                        <p id="carthijo">0</p>
+                    </div>
+                </div>        
+            </nav>    
+            <nav class="menu__options">
+                <a href="">Home</a>
+                <a href="">Agencia de Viajes</a>
+                <a href=""> Moda y Estilo</a>
+                <a href=""> Multimedi</a>
+                <a href=""> Contacto</a>
+            </nav>
+        </section>    
+    </header>
+    <!------------Bloque Principal de la pagima Inicial------->
+    <main> 
+        <section class="products">
+            <article class="products__article">
+                <img src="Img/agencia-de-viajes.png" class="article__img" alt="Viaja un mes por el mundo">
+                <h3 class="article__h3">Viaje un mes por el mundo</h3>
+                <p class="article__p">$$10,000.00 Usd</p> 
+                <button class="products__btn">Comprar</button>
+            </article>
+            <article class="products__article">
+                <img src="Img/Multimedia.png" class="article__img" alt="Éxitos musicales de Brasil">
+                <h3 class="article__h3">Exitos musicales de Brasil</h3>
+                <p class="article__p">$$1,000.00 Usd</p> 
+                <button class="products__btn">Comprar</button>
+            </article>
+            <article class="products__article">
+                <img src="Img/Bolsas de dama.jfif" class="article__img" alt="Bolsa de dama">
+                <h3 class="article__h3">Bolsa de piel estilo Europeo</h3>
+                <p class="article__p">$$1,200.00 Usd</p> 
+                <button class="products__btn">Comprar</button>
+            </article>
+            <article class="products__article">
+                <img src="Img/Ropa para dama.jfif" class="article__img" alt="Ropa para ella">
+                <h3 class="article__h3">Coordinado de piel importado de Canada</h3>
+                <p class="article__p">$$2,500.00 Usd</p>
+                <button class="products__btn products__btn--disabled">Comprar</button>
+            </article>
+            <article class="products__article">
+                <img src="Img/Zapatos.jfif" class="article__img" alt="La moda en zapatos">
+                <h3 class="article__h3">Zapatos estilo Frances </h3>
+                <p class="article__p">$$2,100.00 Usd</p> 
+                <button class="products__btn">Comprar</button>
+            </article>
+        </section>
+                <!------------ Sección del Carrito ------------>
+        <section class="cart">
+            <div class="closeI">
+                <a href="" id="closeC">X</a>
+            </div>
+            <div class="cart__title">    
+                <h2>CARRITO</h2>
+            </div>    
+            <div class="cart__div">
+            </div> 
+        </section>
+    </main>        
+    <footer>
+        <section>
+            <small>&copy; 2024 DRG Company LLC.<br>Todos los derechos reservados.</small>           
+        </section>
+        <section>
+            <p> Llane al area comercial al telefono: (52) 55427124</p> 
+            <nav>
+                <a href="">Chatea en este momento</a>
+            </nav>           
+        </section>
+    </footer>
+</body>
+</html>
