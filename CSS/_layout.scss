@@ -10,7 +10,7 @@ body {
         }
         .header__menu {
             @include flexBox;
-            @extend %link_Menu;
+            @include mixin_Menu;
             .menu__img {
                 width: 90px;
             }        
@@ -22,13 +22,13 @@ body {
                 }
                 .menu__icons--secondary {
                     #cartpadre{
-                        @extend %link_cartPadre
+                        @include mixin_cartPadre
                     }
                     #carrito {
-                        @extend %link_carrito;
+                        @include mixin_carrito;
                     }    
                     #carthijo{
-                        @extend %link_cartHijo
+                        @include mixin_cartHijo
                     }    
                 } 
            }        
@@ -40,7 +40,7 @@ body {
             .products__article {
                 text-align: center;
                 .products__btn {
-                    @extend %link_Productsbutton;
+                        @include mixin_Productsbutton;
                 }
                 .products__btn--disabled {
                     @include buttoncomplement;
@@ -50,9 +50,7 @@ body {
                     margin-bottom: 15px;
                 }
                 .article__h3 {
-                    font-weight: 500;
-                    font-size: 25px;
-                    margin-bottom: 5px;
+                    @include articleH3;
                 }
                 .article__p {
                     font-weight: 300;
@@ -71,16 +69,14 @@ body {
         }
         .cart {
             @include Cart(200px, #d8d51a, 25px, border-box,-19px -1px 22px -15px rgba(0, 0, 0,30),fixed);
-            right: -50%;
-            top: 100px;
-            transition: all .25s ease;
+            @include compleCart;   
             .cart__title {
-                @extend %link_cartTitle;
+                @include mixin_cartTitle;
             }
             .cart__div {
                 article{
                     @include flexBox;
-                    @extend  %link_article;
+                    @include mixin_article;
                     .cart__img {
                         width: 25px;
                     }
@@ -102,14 +98,12 @@ body {
                 right: 0;
             }
             &.closeX {
-                right: -50%;
-                top: 100px;
-                transition: all .25s ease;
+                @include cartClose;
             }    
         }
     } 
     footer {           
         @include flexBox;
-        @extend %link_footer;
+        @include mixin_footer;
     }
 }    

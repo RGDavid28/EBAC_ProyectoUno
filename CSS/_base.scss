@@ -11,17 +11,111 @@ $bg-color: #0f8ee2;
     flex-direction: column;
 }
 
-@mixin Cart($width, $backgroud-color,$padding,$box-sizing,$box-shadow,$position) {
+@mixin Cart($width, $background-color,$padding,$box-sizing,$box-shadow,$position) {
     width: $width;
-    background-color: $backgroud-color; 
+    background-color: $background-color; 
     padding: $padding;
     box-sizing: $box-sizing;
     box-shadow: $box-shadow;
     position: $position; 
 }
 
+@mixin compleCart{   
+    right: -50%;
+    top: 100px;
+    transition: all .25s ease;
+}    
 @mixin buttoncomplement {
     background-color: rgb(209, 209,209);
+}
+
+@mixin mixin_Menu {
+    width: 100%;
+    padding: 20px 50px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px, solid,#008000;
+    word-spacing:2px;  
+}
+@mixin mixin_cartPadre {
+    padding: 20px 0;
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+    margin-left: 0;
+}
+@mixin mixin_cartTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 25px 0;
+    box-sizing: border-box;
+}
+
+@mixin mixin_cartHijo {
+    margin: auto;
+    width:25px;
+    height: 25px; 
+    border-radius: 50%;
+    background-color: #d81414;
+    color: #f5f7f8;
+    position: absolute;
+    align-content: center;
+    top: 12%;
+    right: 20%;
+    z-index: 100;
+}
+@mixin mixin_carrito{
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    z-index: 50;
+}
+@mixin cartClose {
+    right: -50%;
+    top: 100px;
+    transition: all .25s ease;
+}
+
+@mixin mixin_Productsbutton {
+    display: block;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 600;
+    font-family: $fontFamily;
+}
+
+
+@mixin mixin_article {
+    border-bottom: 1px solid #333;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+@mixin articleH3{
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+@mixin mixin_footer{
+    width: 85%;
+    padding: 20px 50px;
+    background-color:#7fffd4;
+    align-items: center;
+    box-sizing: border-box;
+    /* usando la funcion CLAMP */    
+    font-size: clamp(.5rem, 5vw, 1rem);
 }
 
 %link_EstiloProducto {
@@ -36,80 +130,26 @@ $bg-color: #0f8ee2;
     grid-column-gap: 10px;
     background-color: $bg-color;
 }
-
-%link_Menu {
+@mixin compleProducts820 {
     width: 100%;
-    padding: 20px 50px;
-    align-items: center;
-    box-sizing: border-box;
-    border: 1px, solid,#008000;
-    word-spacing:2px;  
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1frx));
 }
-%link_cartPadre {
-    padding: 20px 0;
-    position: relative;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 0;
-    margin-left: 0;
-}
-%link_cartTitle {
+@mixin compleFlexCar480_820 {
+    flex-direction: column;
+    align-items:center; 
+}                        
+@mixin compleFooter480_820 {
     width: 100%;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 25px 0;
-    box-sizing: border-box;
+    color: #fafafa;
+    background-color: #050505;
 }
-
-%link_cartHijo {
-    margin: auto;
-    width:25px;
-    height: 25px; 
-    border-radius: 50%;
-    background-color: #d81414;
-    color: #f5f7f8;
-    position: absolute;
-    align-content: center;
-    top: 12%;
-    right: 20%;
-    z-index: 100;
-}
-%link_carrito{
-    margin: auto;
-    margin-top: 20px;
-    position: relative;
-    z-index: 50;
-}
-%link_Productsbutton {
-    display: block;
-    border: none;
-    background-color: #333;
-    color: #fff;
-    border-radius: 20px;
+@mixin compleProducts480 {
     width: 100%;
-    padding: 10px 0;
-    text-align: center;
-    font-weight: 600;
-    font-family: $fontFamily;
+    grid-template-columns: 1frx;
+    padding: 10px;
 }
-
-
-%link_article {
-    border-bottom: 1px solid #333;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
-    box-sizing: border-box;
-}
-%link_footer{
-    width: 85%;
-    padding: 20px 50px;
-    background-color:#7fffd4;
-    align-items: center;
-    box-sizing: border-box;
-    /* usando la funcion CLAMP */    
-    font-size: clamp(.5rem, 5vw, 1rem);
+@mixin compleArticleImg480 {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
 }

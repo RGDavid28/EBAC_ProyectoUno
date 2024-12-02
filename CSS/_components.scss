@@ -18,8 +18,7 @@ body {
     }
     main {        
         .products {
-            width: 100%;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1frx));
+            @include compleProducts820;
             .products__article {
                 .article__img {
                     width: 150px;
@@ -37,8 +36,7 @@ body {
                     font-size: 35px;
                 }
                 .cart__div {
-                    flex-direction: column;
-                    align-items:center;     
+                    @include compleFlexCar480_820;
                     .cart__img {
                         width: 80px;
                     }
@@ -55,9 +53,7 @@ body {
         }
     }
     footer {
-        width: 100%;
-        color: #fafafa;
-        background-color: #050505;
+        @include compleFooter480_820;
     }
 }    
 }           
@@ -78,14 +74,10 @@ body {
     }    
     main {
         .products {
-            width: 100%;
-            grid-template-columns: 1frx;
-            padding: 10px;
+            @include compleProducts480;
             .products__article {
                 .article__img {
-                    width: 100%;
-                    max-width: 200px;
-                    margin-bottom: 10px;
+                    @include compleArticleImg480;
                 }
                 .article__h3, .article__p {
                     padding: 0 10px;
@@ -105,8 +97,7 @@ body {
                     font-size: 25px;
                 }
                 .cart__div {
-                    flex-direction: column;
-                    align-items:center;
+                    @include compleFlexCar480_820;
                     .cart__price, .cart__product__description {
                         font-size: 15px;
                         font-weight: 500;
@@ -119,10 +110,7 @@ body {
         }         
     }        
     footer {
-        width: 100%;
-       /* dark color light-on-dark*/
-        color: #fafafa;
-        background-color: #050505;
+        @include compleFooter480_820;
     }
 }
 }
